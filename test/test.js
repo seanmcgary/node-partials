@@ -6,11 +6,9 @@ var templatePath = path.normalize(__dirname + '/templates');
 
 partials = new partials();
 
-console.log(partials);
-
 var templates = partials.compile(templatePath);
+var serializedTemplates = partials.serializeTemplates(templates);
 
-_.each(templates, function(tmpl){
-	console.log(tmpl());
-	console.log('--------\n\n');
-});
+
+console.log(_.keys(templates));
+console.log(serializedTemplates);
