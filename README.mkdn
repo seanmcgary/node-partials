@@ -1,0 +1,39 @@
+node-partials is an extension of the [underscore](http://underscorejs.org/) templating system that adds support for inter-file partials. Partials can be compiled and used on the server as well as serialized to be used on the client.
+
+## Setup/example
+
+First lets create a templat file called ```myTemplates.html```
+
+```
+## this-is-the-name-of-the-partial
+This is some content of the partial
+
+<div class="some class">
+	Like some HTML for example
+</div>
+<div class="some-val">
+	<%= foo %>
+</div>
+```
+
+Now lets set it up to compile the partial
+
+```
+var partials = require('node-partials');
+var templatePath = '/some/path/to/your/templates';
+
+partials = new partials({
+	delimiter: '## ', 			// defaults to '## ' but can be pretty much whatever you want
+	validFileTypes: ['html'],	// defaults to 'html' only
+});
+
+var templates = partials.compile(templatePath);
+var serializedTemplates = partials.serializeTemplates(templates);
+
+// to get the content of the partial:
+partials['myTemplate/this-is-the-name-of-the-partial']({ foo: 'this is a variable' });
+```
+
+In this case, ```partials``` is a dictionary of all of your templates indexed by:
+
+```<file name>/<template name>```. This also supports the nesting of directories, e.g. ```<directory>/<directory>/<file name>/<template name>```
