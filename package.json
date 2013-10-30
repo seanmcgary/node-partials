@@ -1,0 +1,24 @@
+{
+  "name": "node-partials",
+  "version": "0.0.1",
+  "description": "Inter-file template partials using Underscore's template engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:seanmcgary/node-partials"
+  },
+  "keywords": [
+    "underscore",
+    "partials",
+    "templates",
+    "html"
+  ],
+  "author": "Sean McGary <sean@seanmcgary.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seanmcgary/node-partials/issues"
+  }
+}
