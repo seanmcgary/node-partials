@@ -34,6 +34,6 @@ var serializedTemplates = partials.serializeTemplates(templates);
 partials['myTemplate/this-is-the-name-of-the-partial']({ foo: 'this is a variable' });
 ```
 
-In this case, ```partials``` is a dictionary of all of your templates indexed by:
+In this case, ```partials``` is a dictionary of all of your templates indexed by: ```<file name>/<template name>```. 
 
-```<file name>/<template name>```. This also supports the nesting of directories, e.g. ```<directory>/<directory>/<file name>/<template name>```
+This also supports the nesting of directories, e.g. ```<directory>/<directory>/<file name>/<template name>```
