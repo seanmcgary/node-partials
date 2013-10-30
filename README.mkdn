@@ -4,7 +4,7 @@ node-partials is an extension of the [underscore](http://underscorejs.org/) temp
 
 First lets create a templat file called ```myTemplates.html```
 
-```
+```html
 ## this-is-the-name-of-the-partial
 This is some content of the partial
 
@@ -18,7 +18,7 @@ This is some content of the partial
 
 Now lets set it up to compile the partial
 
-```
+```javascript
 var partials = require('node-partials');
 var templatePath = '/some/path/to/your/templates';
 
