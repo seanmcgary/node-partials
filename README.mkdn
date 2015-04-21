@@ -26,8 +26,8 @@ var templatePath = '/some/path/to/your/templates';
 partials = new partials({
 	delimiter: '## ', 			// defaults to '## ' but can be pretty much whatever you want.
 	validFileTypes: ['html'],	// defaults to 'html' only.
-	commentDelimiter: '<%% ' // defaults to '<%% ', would strongly suggest not overiding unless you
-													 // plan to use the literal '<%% ' in your html.
+	commentStartDelimiter: '!##',
+	commentEndDelimiter: '##!'
 });
 
 var templates = partials.compile(templatePath);
