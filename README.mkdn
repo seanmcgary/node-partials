@@ -2,12 +2,13 @@ node-partials is an extension of the [underscore](http://underscorejs.org/) temp
 
 ## Setup/example
 
-First lets create a templat file called ```myTemplates.html```
+First lets create a template file called ```myTemplates.html```
 
 ```html
 ## this-is-the-name-of-the-partial
 This is some content of the partial
 
+!## this is a comment line ##!
 <div class="some class">
 	Like some HTML for example
 </div>
