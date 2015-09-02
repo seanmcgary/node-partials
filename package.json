@@ -1,6 +1,6 @@
 {
   "name": "node-partials",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Inter-file template partials using Underscore's template engine",
   "main": "index.js",
   "scripts": {
