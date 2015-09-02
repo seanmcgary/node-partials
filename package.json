@@ -23,5 +23,8 @@
   },
   "dependencies": {
     "lodash": "~3.7.x"
+  },
+  "devDependencies": {
+    "nodeunit": "^0.9.1"
   }
 }

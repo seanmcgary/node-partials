@@ -14,8 +14,8 @@ console.log(_.keys(templates));
 console.log(serializedTemplates);
 
 var templateSettings = {
-	interpolate: /<&=([\s\S]+?)&>/g,
-	evaluate: /<&([\s\S]+?)&>/g
+	interpolate: /<%=([\s\S]+?)%>/g,
+	evaluate: /<%([\s\S]+?)%>/g
 };
 var lodashPartials = new _partials({
 	lodashParams: templateSettings
