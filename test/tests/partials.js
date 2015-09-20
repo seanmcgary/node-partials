@@ -30,8 +30,10 @@ var invalidTemplates = [
 
 module.exports = {
 	setUp: function(cb){
-		this.partials = new NodePartials();
-		this.compiledTemplates = this.partials.compile(templatePath);
+		this.partials = new NodePartials({
+			templatePath: templatePath
+		});
+		this.compiledTemplates = this.partials.getCompiledTemplates();
 
 		cb();
 	},
