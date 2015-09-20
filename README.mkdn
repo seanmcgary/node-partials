@@ -32,10 +32,10 @@ partials = new partials({
 
 });
 
-var serializedTemplates = partials.serializeTemplates(templates);
+var templates = partials.getCompiledTemplates();
 
 // to get the content of the partial:
-partials['myTemplate/this-is-the-name-of-the-partial']({ foo: 'this is a variable' });
+templates['myTemplate/this-is-the-name-of-the-partial']({ foo: 'this is a variable' });
 ```
 
 In this case, ```partials``` is a dictionary of all of your templates indexed by: ```<file name>/<template name>```. 
