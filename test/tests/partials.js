@@ -30,8 +30,10 @@ var invalidTemplates = [
 
 module.exports = {
 	setUp: function(cb){
-		this.partials = new NodePartials();
-		this.compiledTemplates = this.partials.compile(templatePath);
+		this.partials = new NodePartials({
+			templatePath: templatePath
+		});
+		this.compiledTemplates = this.partials.getCompiledTemplates();
 
 		cb();
 	},
@@ -71,5 +73,15 @@ module.exports = {
 		test.equal(rendered, expected);
 		test.done();
 
+	},
+	serializesTemplates: function(test){
+		var self = this;
+
+		test.expect(2);
+
+		var templates = this.partials.getSerializedTemplates();
+		test.equal(_.isString(templates), true);
+		test.ok(templates.length);
+		test.done();
 	}
 };
