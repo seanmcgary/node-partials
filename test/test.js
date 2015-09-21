@@ -2,12 +2,14 @@ var path = require('path');
 var _partials = require('../index');
 var _ = require('lodash');
 
-var templatePath = path.normalize(__dirname + '/templates');
-console.log(templatePath);
+var templatePath = path.normalize(__dirname + '/templates/deepPartials');
+
 partials = new _partials({
 	templatePath: templatePath
 });
 
-console.log(partials);
+var templates = partials.getCompiledTemplates();
+
+console.log(templates);
 
 

@@ -8,6 +8,8 @@ var expectedTemplates = [
 	{
 		key: 'deepPartials/deep/deep-partial'
 	}, {
+		key: 'deepPartials/deep/partial/slash'
+	}, {
 		key: 'dir.period/testPeriod/test-partial-1'
 	}, {
 		key: 'lodashTest/test'
